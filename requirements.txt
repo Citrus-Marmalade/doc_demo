@@ -1,0 +1,4 @@
+Sphinx==5.3.0
+furo
+sphinx-design
+myst_parser
