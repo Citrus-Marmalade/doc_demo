@@ -19,6 +19,10 @@ os.makedirs(docs_dir)
 # Regenerate the Sphinx documentation
 subprocess.run(['sphinx-build', '-b', 'html', '.', docs_dir])
 
+# add nojekyll in build root folder.
+with open(os.path.join(docs_dir, '.nojekyll'), 'w') as f:
+    pass
+
 # Open the generated documentation in a web browser
 index_path = os.path.join(docs_dir, 'index.html')
 args = parser.parse_args()
