@@ -12,4 +12,4 @@ Example of docs
    :caption: Contents:
 
    nxp_port/doc
-   readme
+   readme.rst
