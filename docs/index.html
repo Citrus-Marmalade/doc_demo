@@ -3,12 +3,13 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="CPC MIMXRT595S Port" href="nxp_port/doc.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2023.03.27 -->
-        <title>CPC Documentation Demo 0.1 documentation</title>
+        <title>CPC Demo documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
@@ -123,7 +124,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">CPC Documentation Demo 0.1 documentation</div></a>
+      <a href="#"><div class="brand">CPC Demo documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -149,7 +150,7 @@
     <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">CPC Documentation Demo 0.1 documentation</span>
+  <span class="sidebar-brand-text">CPC Demo documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -157,7 +158,12 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nxp_port/doc.html">CPC MIMXRT595S Port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">Readme</a></li>
+</ul>
+
 </div>
 </div>
 
@@ -192,27 +198,25 @@
         <article role="main">
           <section id="welcome-to-my-sphinx-documentation">
 <h1>Welcome to My Sphinx Documentation<a class="headerlink" href="#welcome-to-my-sphinx-documentation" title="Permalink to this heading">#</a></h1>
-<p>This is the main entry point for the documentation of the My Sphinx Docs project. Here you will find information about the project, its features, and how to get started.</p>
-<section id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
-<p>To get started with the documentation, please refer to the following sections:</p>
-<ul class="simple">
-<li><p><strong>Installation</strong>: Instructions on how to install the necessary packages.</p></li>
-<li><p><strong>Usage</strong>: Guidelines on how to use the documentation.</p></li>
-<li><p><strong>Contributing</strong>: Information on how to contribute to the project.</p></li>
+<p>This project sets up a Sphinx documentation site using RestructureText for the source files and the Furo theme for styling.</p>
+<section id="example-of-docs">
+<h2>Example of docs<a class="headerlink" href="#example-of-docs" title="Permalink to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nxp_port/doc.html">CPC MIMXRT595S Port</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nxp_port/doc.html#getting-started">Getting Started</a></li>
 </ul>
-</section>
-<section id="features">
-<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Easy to use Markdown format for documentation.</p></li>
-<li><p>Customizable with the Furo theme.</p></li>
-<li><p>Supports static files and custom templates.</p></li>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html">Readme</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#project-structure">Project Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#customization">Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="readme.html#license">License</a></li>
 </ul>
-</section>
-<section id="learn-more">
-<h2>Learn More<a class="headerlink" href="#learn-more" title="Permalink to this heading">#</a></h2>
-<p>For more detailed information, please check the other sections of the documentation.</p>
+</li>
+</ul>
+</div>
 </section>
 </section>
 
@@ -221,7 +225,15 @@
       <footer>
         
         <div class="related-pages">
-          
+          <a class="next-page" href="nxp_port/doc.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">CPC MIMXRT595S Port</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
           
         </div>
         <div class="bottom-of-page">
@@ -254,9 +266,7 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Welcome to My Sphinx Documentation</a><ul>
-<li><a class="reference internal" href="#getting-started">Getting Started</a></li>
-<li><a class="reference internal" href="#features">Features</a></li>
-<li><a class="reference internal" href="#learn-more">Learn More</a></li>
+<li><a class="reference internal" href="#example-of-docs">Example of docs</a></li>
 </ul>
 </li>
 </ul>
@@ -275,5 +285,6 @@
     <script src="_static/doctools.js"></script>
     <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/scripts/furo.js"></script>
+    <script src="_static/design-tabs.js"></script>
     </body>
 </html>
