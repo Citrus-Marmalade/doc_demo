@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Readme" href="../readme.html" /><link rel="prev" title="Welcome to My Sphinx Documentation" href="../index.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="Sphinx Demo" href="../sphinx_demo.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2023.03.27 -->
         <title>CPC MIMXRT595S Port - CPC Demo documentation</title>
@@ -160,8 +160,8 @@
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../sphinx_demo.html">Sphinx Demo</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">CPC MIMXRT595S Port</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../readme.html">Readme</a></li>
 </ul>
 
 </div>
@@ -198,7 +198,7 @@
         <article role="main">
           <section id="cpc-mimxrt595s-port">
 <h1>CPC MIMXRT595S Port<a class="headerlink" href="#cpc-mimxrt595s-port" title="Permalink to this heading">#</a></h1>
-<p>This NXP port offers CPC SDIO and SPI driver implementations specific for the development board <a class="reference external" href="https://www.nxp.com/design/design-center/development-boards-and-designs/i-mx-evaluation-and-development-boards/i-mx-rt595-evaluation-kit:MIMXRT595-EVK">MIMXRT595-EVK</a>. The SDIO driver leverages NXP’s high-level SDIO API provided by the SDK, while the SPI driver utilizes the CMSIS API included in the NXP SDK.</p>
+<p>This NXP port offers CPC SDIO and SPI driver implementations NXP <strong>mimxrt595s</strong> CPU. The SDIO driver leverages NXP’s high-level SDIO API provided by the SDK, while the SPI driver utilizes the CMSIS API included in the NXP SDK. The CPC SDIO and SPI driver were developped using this <a class="reference external" href="https://www.nxp.com/design/design-center/development-boards-and-designs/i-mx-evaluation-and-development-boards/i-mx-rt595-evaluation-kit:MIMXRT595-EVK">MIMXRT595-EVK</a> evalutation kit.</p>
 <section id="getting-started">
 <h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
@@ -221,7 +221,7 @@ $ west update
 <h3>2. Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading">#</a></h3>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>The EVK board only supports a voltage of 1.8V. Ensure that any device you want to interface with the EVK board is also aligned to this voltage level to avoid damage or malfunction.</p>
+<p>The EVK board only supports a voltage of <strong>1.8V.</strong> Ensure that any device you want to interface with the EVK board is also aligned to this voltage level to avoid damage or malfunction.</p>
 </div>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
@@ -308,7 +308,28 @@ SDIO</label><div class="sd-tab-content docutils">
 <section id="generate-the-test-project">
 <h3>3. Generate the Test Project<a class="headerlink" href="#generate-the-test-project" title="Permalink to this heading">#</a></h3>
 <p>To generate the project, use <strong>CMake</strong> with the following command:</p>
-<pre class="literal-block">$ cmake -DMCUX_SDK_DIR:PATH=&lt;PATH_TO_MCUX_SDK&gt;       -DCMAKE_TOOLCHAIN_FILE:FILEPATH=&lt;gsdk/platform/service/cpc-v2/test/port/nxp/evkmimxrt595/armgcc.cmake&gt;       -DCMAKE_BUILD_TYPE=Debug       -S&lt;PATH_TO_GSDK&gt;</pre>
+<dl class="simple">
+<dt>Here are the argument list:</dt><dd><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">-DMCUX_SDK_PROJECT_NAME:string=&lt;executable</span> <span class="pre">name&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-DMCUX_SDK_DIR:PATH=&lt;PATH_TO_MCUX_SDK&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-DCMAKE_TOOLCHAIN_FILE:FILEPATH=&lt;gsdk/platform/service/cpc-v2/test/port/nxp/evkmimxrt595/armgcc.cmake&gt;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-DCMAKE_BUILD_TYPE=Debug</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-S&lt;PATH_TO_GSDK&gt;</span></code></p></li>
+</ul>
+</dd>
+</dl>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+SPI example</label><div class="sd-tab-content docutils">
+<pre class="literal-block">$ cmake -DMCUX_SDK_PROJECT_NAME:string=cpc_blackbox_primary_nxp_spi_bm       -DCMAKE_BUILD_TYPE=Debug       -DMCUX_SDK_DIR:PATH=/Users/steve/dev/gsdk/../mcuxsdk       -DCMAKE_TOOLCHAIN_FILE:FILEPATH=/Users/steve/dev/gsdk/platform/service/cpc-v2/test/port/nxp/evkmimxrt595/armgcc.cmake       -S/Users/steve/dev/gsdk -B/Users/steve/dev/gsdk/</pre>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-3">
+SDIO example</label><div class="sd-tab-content docutils">
+<pre class="literal-block">$ cmake -DMCUX_SDK_PROJECT_NAME:string=cpc_blackbox_primary_nxp_sdio_fr    -DCMAKE_BUILD_TYPE=Debug    -DMCUX_SDK_DIR:PATH=/Users/steve/dev/gsdk/../mcuxsdk    -DCMAKE_TOOLCHAIN_FILE:FILEPATH=/Users/steve/dev/gsdk/platform/service/cpc-v2/test/port/nxp/evkmimxrt595/armgcc.cmake    -S/Users/steve/dev/gsdk -B/Users/steve/dev/gsdk/</pre>
+</div>
+</div>
 <p>Once the project is generated, navigate to the build folder and compile the project using:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ make
 </pre></div>
@@ -330,23 +351,15 @@ SDIO</label><div class="sd-tab-content docutils">
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="../readme.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Readme</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="../index.html">
+          
+          <a class="prev-page" href="../sphinx_demo.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Home</div>
+                <div class="title">Sphinx Demo</div>
                 
               </div>
             </a>

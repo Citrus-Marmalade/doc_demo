@@ -1,7 +1,7 @@
 ===================
 CPC MIMXRT595S Port
 ===================
-This NXP port offers CPC SDIO and SPI driver implementations specific for the development board `MIMXRT595-EVK <https://www.nxp.com/design/design-center/development-boards-and-designs/i-mx-evaluation-and-development-boards/i-mx-rt595-evaluation-kit:MIMXRT595-EVK>`_. The SDIO driver leverages NXP's high-level SDIO API provided by the SDK, while the SPI driver utilizes the CMSIS API included in the NXP SDK.
+This NXP port offers CPC SDIO and SPI driver implementations NXP **mimxrt595s** CPU. The SDIO driver leverages NXP's high-level SDIO API provided by the SDK, while the SPI driver utilizes the CMSIS API included in the NXP SDK. The CPC SDIO and SPI driver were developped using this `MIMXRT595-EVK <https://www.nxp.com/design/design-center/development-boards-and-designs/i-mx-evaluation-and-development-boards/i-mx-rt595-evaluation-kit:MIMXRT595-EVK>`_ evalutation kit.
 
 Getting Started
 ===============
@@ -26,7 +26,7 @@ NXP's Github page `here <https://github.com/nxp-mcuxpresso/mcux-sdk>`_.
 -----------
 .. Attention::
 
-   The EVK board only supports a voltage of 1.8V. Ensure that any device you want to interface with the EVK board is also aligned to this voltage level to avoid damage or malfunction.
+   The EVK board only supports a voltage of **1.8V.** Ensure that any device you want to interface with the EVK board is also aligned to this voltage level to avoid damage or malfunction.
 
 .. caution::
 
@@ -87,12 +87,30 @@ The NXP EVK board is designed for developers to prototype and test their applica
 ----------------------------
 To generate the project, use **CMake** with the following command:
 
-.. parsed-literal::
-   $ cmake -DMCUX_SDK_DIR:PATH=<PATH_TO_MCUX_SDK> \
-         -DCMAKE_TOOLCHAIN_FILE:FILEPATH=<gsdk/platform/service/cpc-v2/test/port/nxp/evkmimxrt595/armgcc.cmake> \
-         -DCMAKE_BUILD_TYPE=Debug \
-         -S<PATH_TO_GSDK>
-    
+Here are the argument list:
+   - ``-DMCUX_SDK_PROJECT_NAME:string=<executable name>``
+   - ``-DMCUX_SDK_DIR:PATH=<PATH_TO_MCUX_SDK>``
+   - ``-DCMAKE_TOOLCHAIN_FILE:FILEPATH=<gsdk/platform/service/cpc-v2/test/port/nxp/evkmimxrt595/armgcc.cmake>``
+   - ``-DCMAKE_BUILD_TYPE=Debug``
+   - ``-S<PATH_TO_GSDK>``
+
+.. tab-set::
+   .. tab-item:: SPI example
+
+      .. parsed-literal::
+         $ cmake -DMCUX_SDK_PROJECT_NAME:string=cpc_blackbox_primary_nxp_spi_bm \
+               -DCMAKE_BUILD_TYPE=Debug \
+               -DMCUX_SDK_DIR:PATH=/Users/steve/dev/gsdk/../mcuxsdk \
+               -DCMAKE_TOOLCHAIN_FILE:FILEPATH=/Users/steve/dev/gsdk/platform/service/cpc-v2/test/port/nxp/evkmimxrt595/armgcc.cmake \
+               -S/Users/steve/dev/gsdk -B/Users/steve/dev/gsdk/
+   .. tab-item:: SDIO example
+
+      .. parsed-literal::
+         $ cmake -DMCUX_SDK_PROJECT_NAME:string=cpc_blackbox_primary_nxp_sdio_fr \
+            -DCMAKE_BUILD_TYPE=Debug \
+            -DMCUX_SDK_DIR:PATH=/Users/steve/dev/gsdk/../mcuxsdk \
+            -DCMAKE_TOOLCHAIN_FILE:FILEPATH=/Users/steve/dev/gsdk/platform/service/cpc-v2/test/port/nxp/evkmimxrt595/armgcc.cmake \
+            -S/Users/steve/dev/gsdk \-B/Users/steve/dev/gsdk/
 
 Once the project is generated, navigate to the build folder and compile the project using:
 

@@ -11,5 +11,5 @@ Example of docs
    :maxdepth: 2
    :caption: Contents:
 
+   sphinx_demo
    nxp_port/doc
-   readme.rst
