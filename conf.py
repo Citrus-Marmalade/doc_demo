@@ -5,13 +5,14 @@ import sys
 sys.path.insert(0, os.path.abspath('.'))
 
 # Project information
-project = 'CPC Documentation Demo'
+project = 'CPC'
 author = 'Cirtus-Marmalade'
-release = '0.1'
+release = 'Demo'
 
 # General configuration
 extensions = [
     'myst_parser',  # For Markdown support
+    'sphinx_design'
 ]
 
 templates_path = ['_templates']
