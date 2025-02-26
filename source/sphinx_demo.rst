@@ -2,6 +2,7 @@
 Sphinx Demo
 ===========
 
+.. _sphinx-demo:
 
 Project Structure
 =================
