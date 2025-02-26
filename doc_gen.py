@@ -11,11 +11,6 @@ parser.add_argument('-v', '--view', action='store_true', help='View the generate
 # Define the docs directory
 docs_dir = '_build'
 
-# # Clean the docs directory
-# if os.path.exists(docs_dir):
-#     shutil.rmtree(docs_dir)
-# os.makedirs(docs_dir)
-
 # Regenerate the Sphinx documentation
 subprocess.run(['make', 'html'])
 
@@ -24,4 +19,4 @@ with open(os.path.join(docs_dir, '.nojekyll'), 'w') as f:
     pass
 
 # Open the generated documentation in a web browser
-webbrowser.open(f'file://_build/html/index.html')
+webbrowser.open(f'file://{os.path.abspath(os.path.join(docs_dir, "html", "index.html"))}')
