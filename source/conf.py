@@ -9,7 +9,7 @@
 project = 'demo_doc'
 copyright = '2025, Gabriel Beaulieu'
 author = 'Gabriel Beaulieu'
-release = '0.0.3'
+release = '0.0.4'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
