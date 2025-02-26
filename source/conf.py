@@ -9,7 +9,7 @@
 project = 'demo_doc'
 copyright = '2025, Gabriel Beaulieu'
 author = 'Gabriel Beaulieu'
-release = '0.0.4'
+release = '0.0.1'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -21,7 +21,7 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = []
 
-
+html_logo = '_static/logo.png'
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
