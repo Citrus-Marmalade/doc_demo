@@ -4,6 +4,10 @@ Welcome to My Sphinx Documentation
 This project sets up a Sphinx documentation site using RestructureText for the source files and the Furo theme for styling.
 
 
+.. image:: ../_static/logo.png
+   :alt: Logo
+
+
 Example of docs
 =================
 .. card-carousel:: 2
