@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="CPC MIMXRT595S Port" href="nxp_port/doc.html" /><link rel="prev" title="Welcome to My Sphinx Documentation" href="index.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Sphinx Demo" href="sphinx_demo.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2023.03.27 -->
-        <title>Sphinx Demo - CPC Demo documentation</title>
+        <title>doc_demo 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.5ea377869091fd0449014c60fc090103.min.css" />
@@ -124,7 +124,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">CPC Demo documentation</div></a>
+      <a href="#"><div class="brand">doc_demo 0.0.1 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -144,13 +144,10 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
   
-  <div class="sidebar-logo-container">
-    <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
-  </div>
   
-  <span class="sidebar-brand-text">CPC Demo documentation</span>
+  <span class="sidebar-brand-text">doc_demo 0.0.1 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -159,9 +156,10 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Sphinx Demo</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sphinx_demo.html">Sphinx Demo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nxp_port/doc.html">CPC MIMXRT595S Port</a></li>
+<li class="toctree-l1"><a class="reference internal" href="versioned/doc.html">Installation</a></li>
 </ul>
 
 </div>
@@ -196,60 +194,35 @@
           </label>
         </div>
         <article role="main">
-          <section id="sphinx-demo">
-<h1>Sphinx Demo<a class="headerlink" href="#sphinx-demo" title="Permalink to this heading">#</a></h1>
-<section id="project-structure">
-<h2>Project Structure<a class="headerlink" href="#project-structure" title="Permalink to this heading">#</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>doc_demo
-├── _static          # Custom static files (CSS, JS)
-├── _templates       # Custom templates for documentation layout
-├── docs/            # Build output for the generated HTML documenation.
-├── conf.py          # Sphinx configuration file
-├── index.md         # Main entry point for the documentation
-├── nxp_port         # NXP port documenation folder/
-│   └──doc.rst       # Getting started with NXP port source file.
-├── requirements.txt # Required Python package
-└── doc_gen.py       # Python script to generate the documentation.
-</pre></div>
-</div>
-</section>
-<section id="getting-started">
-<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this heading">#</a></h2>
-<p>To set up the Sphinx documentation project, follow these steps:</p>
-<ol class="arabic">
-<li><p><strong>Install Requirements</strong>: Make sure you have Python installed, then install the required packages by running:
-.. parsed-literal:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">docs</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
-</pre></div>
-</div>
-</li>
-<li><p><strong>Build the Documentation</strong>: Navigate to the <cite>docs</cite> directory and run:
-.. parsed-literal:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sphinx</span><span class="o">-</span><span class="n">build</span> <span class="o">-</span><span class="n">b</span> <span class="n">html</span> <span class="o">.</span> <span class="n">docs</span>
-</pre></div>
-</div>
-</li>
-<li><p><strong>View the Documentation</strong>: Open the generated HTML files in the <cite>docs/</cite> directory in your web browser.</p></li>
-</ol>
-</section>
-<section id="customization">
-<h2>Customization<a class="headerlink" href="#customization" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>You can add custom static files (like CSS or JavaScript) in the <cite>docs/_static</cite> directory.</p></li>
-<li><p>If you want to modify the layout, create custom templates in the <cite>docs/_templates</cite> directory.</p></li>
-<li><p>Update the <cite>docs/conf.py</cite> file to configure Sphinx settings and extensions.</p></li>
+          <section id="welcome-to-my-sphinx-documentation">
+<h1>Welcome to My Sphinx Documentation<a class="headerlink" href="#welcome-to-my-sphinx-documentation" title="Permalink to this heading">#</a></h1>
+<p>This project sets up a Sphinx documentation site using RestructureText for the source files and the Furo theme for styling.</p>
+<section id="example-of-docs">
+<h2>Example of docs<a class="headerlink" href="#example-of-docs" title="Permalink to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sphinx_demo.html">Sphinx Demo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="sphinx_demo.html#project-structure">Project Structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx_demo.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx_demo.html#customization">Customization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sphinx_demo.html#license">License</a></li>
 </ul>
-<section id="extensions-example">
-<h3>Extensions Example<a class="headerlink" href="#extensions-example" title="Permalink to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p><a class="reference external" href="https://sphinx-themes.org/sample-sites/furo/kitchen-sink/">Furo theme</a></p></li>
-<li><p><a class="reference external" href="https://sphinx-design.readthedocs.io/en/furo-theme/">Sphinx-Design</a></p></li>
-</ol>
-</section>
-</section>
-<section id="license">
-<h2>License<a class="headerlink" href="#license" title="Permalink to this heading">#</a></h2>
-<p>This project is licensed under the MIT License. See the LICENSE file for more details.</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nxp_port/doc.html">CPC MIMXRT595S Port</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nxp_port/doc.html#getting-started">Getting Started</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="versioned/doc.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="versioned/doc.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioned/doc.html#installing-using-pip">1. Installing using pip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioned/doc.html#installing-using-conda">1. Installing using conda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioned/doc.html#installing-from-source">1. Installing from source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="versioned/doc.html#installing-the-developer-version">4. Installing the developer version</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </section>
 </section>
 
@@ -258,31 +231,21 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="nxp_port/doc.html">
+          <a class="next-page" href="sphinx_demo.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">CPC MIMXRT595S Port</div>
+                <div class="title">Sphinx Demo</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="index.html">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Home</div>
-                
-              </div>
-            </a>
+          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
             <div class="copyright">
-                Copyright &#169; 
+                Copyright &#169; 2025, Gabriel Beaulieu
             </div>
             Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
             
@@ -308,14 +271,8 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Sphinx Demo</a><ul>
-<li><a class="reference internal" href="#project-structure">Project Structure</a></li>
-<li><a class="reference internal" href="#getting-started">Getting Started</a></li>
-<li><a class="reference internal" href="#customization">Customization</a><ul>
-<li><a class="reference internal" href="#extensions-example">Extensions Example</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#license">License</a></li>
+<li><a class="reference internal" href="#">Welcome to My Sphinx Documentation</a><ul>
+<li><a class="reference internal" href="#example-of-docs">Example of docs</a></li>
 </ul>
 </li>
 </ul>

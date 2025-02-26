@@ -13,3 +13,4 @@ Example of docs
 
    sphinx_demo
    nxp_port/doc
+   versioned/doc
