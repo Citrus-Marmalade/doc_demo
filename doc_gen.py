@@ -9,23 +9,14 @@ parser = argparse.ArgumentParser(description='Generate and optionally view Sphin
 parser.add_argument('-v', '--view', action='store_true', help='View the generated documentation in a web browser')
 
 # Define the docs directory
-docs_dir = 'docs'
-
-# Clean the docs directory
-if os.path.exists(docs_dir):
-    shutil.rmtree(docs_dir)
-os.makedirs(docs_dir)
+docs_dir = '_build'
 
 # Regenerate the Sphinx documentation
-subprocess.run(['sphinx-build', '-b', 'html', '.', docs_dir])
+subprocess.run(['make', 'html'])
 
 # add nojekyll in build root folder.
 with open(os.path.join(docs_dir, '.nojekyll'), 'w') as f:
     pass
 
 # Open the generated documentation in a web browser
-index_path = os.path.join(docs_dir, 'index.html')
-args = parser.parse_args()
-
-if args.view:
-    webbrowser.open(f'file://{os.path.abspath(index_path)}')
+webbrowser.open(f'file://{os.path.abspath(os.path.join(docs_dir, "html", "index.html"))}')
